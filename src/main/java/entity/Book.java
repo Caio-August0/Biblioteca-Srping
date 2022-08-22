@@ -30,7 +30,7 @@ public class Book {
     @Column(name = "nome_do_autor",nullable = false, unique = true)
     private String publisherName;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
+    @ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})// estudar
     @JoinColumn(name = "author_id")
     private Author author;
 
